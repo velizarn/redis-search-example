@@ -56,6 +56,51 @@ Run a search query on an index and perform aggregate transformations on the resu
 FT.AGGREGATE rankCarsIdx "*" GROUPBY 1 @brand REDUCE COUNT 0 AS viewCount SORTBY 4 @viewCount DESC @brand ASC LIMIT 0 10
 ```
 
+This will generate following output:
+```sh
+1) "20"
+2) 1) "brand"
+   2) "Seat"
+   3) "viewCount"
+   4) "15"
+3) 1) "brand"
+   2) "Hyundai"
+   3) "viewCount"
+   4) "14"
+4) 1) "brand"
+   2) "Kia"
+   3) "viewCount"
+   4) "13"
+5) 1) "brand"
+   2) "Skoda"
+   3) "viewCount"
+   4) "13"
+6) 1) "brand"
+   2) "Volkswagen"
+   3) "viewCount"
+   4) "13"
+7) 1) "brand"
+   2) "Audi"
+   3) "viewCount"
+   4) "12"
+8) 1) "brand"
+   2) "Ford"
+   3) "viewCount"
+   4) "12"
+9) 1) "brand"
+   2) "Honda"
+   3) "viewCount"
+   4) "12"
+10) 1) "brand"
+   2) "Mercedes"
+   3) "viewCount"
+   4) "11"
+11) 1) "brand"
+   2) "Renault"
+   3) "viewCount"
+   4) "11"
+```
+
 ### Additional commands
 
 List all indexes
