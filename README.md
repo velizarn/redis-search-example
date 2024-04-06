@@ -20,11 +20,11 @@ Track searches in a web site for car brands, store data into Redis db and displa
 Execute the following command to generate Redis test data:
 
 ```sh
-node.exe ind*ex.js > test.redis
+node.exe index.js > test.redis
 ```
 
 This command will run the *index.js* script and output the generated test data to a file named **test.redis**.<br />
-Test data is imported with following commands:
+Each record of test data generated is imported with following commands:
 ```sh
 HSET brandRankMonth:1712420300717 timestamp 1712420300717 brand "Nissan"
 EXPIRE brandRankMonth:1712420300717 86400 NX
@@ -34,11 +34,11 @@ The second command (EXPIRE) will set the timeout for this hash key to 86400 seco
 
 #### 2. Import Test Data into Redis
 
-Import the generated test data into Redis using RedisInsight or any other preferred method. To import data using RedisInsight:
+Import the generated test data into Redis using RedisInsight or any other preferred method.|<br />To import data using RedisInsight:
 
 - Open RedisInsight and connect to your Redis server.
-- Navigate to the "Data" tab.
-- Click on the "Import" button and select the **test.redis** file generated in the previous step.
+- Navigate to the "Bulk Actions" tab then "Upload Data".
+- Select the **test.redis** file generated in the previous step.
 - Follow the prompts to complete the import process.
 
 #### 3. Create Redis Index with RediSearch
