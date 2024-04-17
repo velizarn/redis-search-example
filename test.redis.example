@@ -1,0 +1,8 @@
+HSET brandRankMonth:1713364963576 timestamp 1713364963576 brand "Skoda"
+EXPIRE brandRankMonth:1713364963576 86385 NX
+
+HSET brandRankMonth:1713364963562 timestamp 1713364963562 brand "Audi"
+EXPIRE brandRankMonth:1713364963562 86400 NX
+
+HSET brandRankMonth:1713364963571 timestamp 1713364963571 brand "Mazda"
+EXPIRE brandRankMonth:1713364963571 86392 NX
